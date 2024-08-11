@@ -189,3 +189,6 @@ class MySpider(scrapy.Spider):
             self.logger.error(f"Failed to download {img_url}: {e}")
 
 
+
+
+
