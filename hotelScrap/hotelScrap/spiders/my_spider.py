@@ -128,7 +128,6 @@ class MySpider(scrapy.Spider):
             countryInfo = [(item['id'], item['displayName'])  for item in data['group'][0]['hotDestination']]
             location, country = random.choice(countryInfo)
 
-            print('00000000000000000000000000000000000000000', country)
 
             # Proceed to the next link
             next_url = "https://uk.trip.com/hotels/list?city=" + str(location)
@@ -177,7 +176,7 @@ class MySpider(scrapy.Spider):
 
                 yield items
 
-            print('kkkkkkkkkkkkkkk', hotels_info)
+        
 
     def download_image(self, img_url, path):
         try:
